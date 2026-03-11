@@ -1,55 +1,68 @@
 # GitInsight 🚀
 
-GitInsight is a **GitHub developer analytics dashboard** that analyzes public GitHub profiles and generates insights about developer activity, repositories, and technology usage.
+GitInsight is a **GitHub developer analytics platform** that analyzes public GitHub profiles and generates insights about developer activity, repository statistics, and technology usage.
 
-The application collects GitHub repository data, processes developer metrics, and visualizes insights through an interactive analytics dashboard.
+The application fetches GitHub data, processes repository metrics, and visualizes developer insights in an interactive dashboard.
 
 ---
 
-# Live Demo
+# Live Demo 🌐
 
-Coming soon (deploy on Vercel)
+Frontend
+https://gitinsight-lake.vercel.app
+
+Backend API
+https://gitinsight-2j2x.onrender.com
+
+Example API Request
+
+https://gitinsight-2j2x.onrender.com/api/analyze/torvalds
 
 ---
 
 # Features
 
 • GitHub profile analytics
+• Repository statistics and developer insights
 • Developer activity scoring system
-• Repository statistics (stars, forks, languages)
-• AI-generated developer insights
-• Language distribution visualization using charts
-• Top repositories ranked by popularity
+• AI-generated developer summary
+• Programming language distribution visualization
+• Top repositories ranked by stars
 • Developer score progress indicator
 • Recent search history
-• Interactive analytics dashboard UI
+• Interactive analytics dashboard
 
 ---
 
 # Tech Stack
 
-### Backend
+## Backend
 
 * Python
 * Flask
 * GitHub REST API
 
-### Frontend
+## Frontend
 
 * HTML
 * CSS
 * JavaScript
 * Chart.js
 
+## Deployment
+
+* Backend: Render
+* Frontend: Vercel
+
 ---
 
-# Project Architecture
+# System Architecture
 
 User
 ↓
-Frontend Dashboard
+Frontend Dashboard (Vercel)
 ↓
-Flask Backend API
+Flask Backend API (Render)
 ↓
 GitHub REST API
 ↓
@@ -63,12 +76,12 @@ Analytics Dashboard
 
 ## Developer Profile
 
-Displays:
+Displays GitHub profile information including:
 
-• GitHub avatar
+• Avatar
 • Followers
 • Repository count
-• Profile link
+• GitHub profile link
 
 ---
 
@@ -85,7 +98,7 @@ GitInsight analyzes repositories to calculate:
 
 ## Developer Activity Score
 
-GitInsight calculates a developer score using:
+GitInsight calculates a developer score using the formula:
 
 score = (repo_count × 2) + stars + (followers × 0.5)
 
@@ -99,86 +112,90 @@ Developers are classified into:
 
 ## AI Developer Summary
 
-GitInsight generates a descriptive summary explaining:
+The platform automatically generates a descriptive summary explaining:
 
 • Developer expertise
-• Activity level
 • Technology focus
+• Activity level
 • Community engagement
 
 ---
 
 ## Top Repositories
 
-Displays the developer's most popular repositories ranked by star count.
+Displays the developer’s most popular repositories ranked by star count.
 
 ---
 
 # Project Structure
 
-```
 github-analyzer
-│
-├── backend
-│   ├── models
-│   ├── routes
-│   ├── services
-│   ├── utils
-│   ├── app.py
-│   └── requirements.txt
-│
-├── frontend
-│   ├── index.html
-│   ├── dashboard.html
-│   ├── script.js
-│   ├── style.css
-│   └── hero-analytics.avif
-│
-├── .gitignore
-└── README.md
-```
+
+backend
+ services
+ routes
+ utils
+ models
+ app.py
+ requirements.txt
+
+frontend
+ index.html
+ dashboard.html
+ style.css
+ script.js
+
+.gitignore
+README.md
 
 ---
 
 # Running the Project Locally
 
-### Clone Repository
+## Clone Repository
 
-```
-git clone https://github.com/yourusername/gitinsight.git
-cd gitinsight
-```
+git clone https://github.com/mashood17/gitinsight.git
+
+cd gitinsight/github-analyzer
 
 ---
 
-### Start Backend
+## Start Backend
 
-```
 cd backend
+
 pip install -r requirements.txt
+
 python app.py
-```
 
-Backend runs at:
+Backend runs at
 
-```
 http://127.0.0.1:5000
-```
 
 ---
 
-### Start Frontend
+## Start Frontend
 
-```
-cd frontend
+cd ../frontend
+
 python -m http.server 5500
-```
 
-Frontend runs at:
+Frontend runs at
 
-```
 http://127.0.0.1:5500
-```
+
+---
+
+# Example Dashboard Insights
+
+The dashboard provides:
+
+• Developer profile overview
+• Repository analytics
+• Programming language distribution chart
+• Developer activity score
+• Top repositories
+• AI-generated developer summary
 
 ---
 
@@ -186,8 +203,7 @@ http://127.0.0.1:5500
 
 • Dark mode dashboard
 • GitHub contribution heatmap analysis
-• Organization repository insights
-• Developer skill ranking
+• Organization repository analytics
 • Export analytics reports
 • Docker deployment
 • CI/CD integration
@@ -196,7 +212,7 @@ http://127.0.0.1:5500
 
 # Author
 
-Mashood17
-Full-Stack Developer
+Mahammad Mashood
+Computer Science Student | Full-Stack Developer
 
 Passionate about building developer tools and analytics platforms.
