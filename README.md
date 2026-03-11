@@ -213,6 +213,7 @@ The dashboard provides:
 # Author
 
 Mahammad Mashood
+
 Computer Science Student | Full-Stack Developer
 
 Passionate about building developer tools and analytics platforms.
