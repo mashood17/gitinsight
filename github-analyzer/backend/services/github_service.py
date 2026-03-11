@@ -2,10 +2,8 @@ import requests
 
 GITHUB_API = "https://api.github.com/users"
 
-# Headers required for GitHub API when deployed on servers
 HEADERS = {
-    "User-Agent": "GitInsight-App",
-    "Accept": "application/vnd.github+json"
+    "User-Agent": "GitInsight-App"
 }
 
 def get_user_profile(username):
@@ -14,8 +12,11 @@ def get_user_profile(username):
 
     response = requests.get(url, headers=HEADERS)
 
+    if response.status_code == 404:
+        return None
+
     if response.status_code != 200:
-        print("GitHub API profile error:", response.status_code, response.text)
+        print("GitHub API error:", response.status_code, response.text)
         return None
 
     return response.json()
@@ -28,7 +29,7 @@ def get_user_repositories(username):
     response = requests.get(url, headers=HEADERS)
 
     if response.status_code != 200:
-        print("GitHub API repo error:", response.status_code, response.text)
+        print("GitHub repos error:", response.status_code, response.text)
         return []
 
     return response.json()
