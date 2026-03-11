@@ -9,7 +9,7 @@ def generate_summary(profile, analysis):
     stars = analysis.get("total_stars")
 
     summary = f"""
-{name} is classified as an {level.lower()} developer with {repos} public repositories on GitHub.
+{name} is classified as an {level.lower()} with {repos} public repositories on GitHub.
 
 The developer primarily works with {language}, suggesting a strong focus on projects built within this technology ecosystem.
 
