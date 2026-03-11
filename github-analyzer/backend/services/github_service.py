@@ -2,13 +2,14 @@ import requests
 
 GITHUB_API = "https://api.github.com/users"
 
+# Headers required for GitHub API when deployed on servers
 HEADERS = {
     "User-Agent": "GitInsight-App",
     "Accept": "application/vnd.github+json"
 }
 
-
 def get_user_profile(username):
+
     url = f"{GITHUB_API}/{username}"
 
     response = requests.get(url, headers=HEADERS)
@@ -21,6 +22,7 @@ def get_user_profile(username):
 
 
 def get_user_repositories(username):
+
     url = f"{GITHUB_API}/{username}/repos"
 
     response = requests.get(url, headers=HEADERS)
