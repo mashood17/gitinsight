@@ -18,7 +18,7 @@ def analyze_user(username):
 
     # get top 5 repositories by stars
     top_repos = sorted(
-        repos, key=lambda x: x["stargazers_count"], reverse=True
+        repos, key=lambda x: x.get("stargazers_count", 0), reverse=True
     )[:5]
 
     analysis = analyze_repositories(repos, profile.get("followers"))
