@@ -1,0 +1,17 @@
+from flask import Flask
+from flask_cors import CORS
+from routes.analyze import analyze_bp
+
+app = Flask(__name__)
+
+# enable CORS
+CORS(app)
+
+app.register_blueprint(analyze_bp)
+
+@app.route("/")
+def home():
+    return "GitHub Analyzer API running"
+
+if __name__ == "__main__":
+    app.run(debug=True)
