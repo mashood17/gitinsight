@@ -35,7 +35,7 @@ saveSearch(username);
 
 try {
 
-const response = await fetch("http://127.0.0.1:5000/api/analyze/" + username);
+const response = await fetch("https://gitinsight-2j2x.onrender.com/api/analyze/" + username)
 
 if (!response.ok) {
 showUserNotFound(username);
