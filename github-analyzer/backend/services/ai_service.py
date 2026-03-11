@@ -1,23 +1,37 @@
 def generate_summary(profile, analysis):
 
-    name = profile.get("name") or "This developer"
+    name = profile.get("name") or profile.get("login")
+    repos = profile.get("public_repos")
     followers = profile.get("followers")
-    repos = analysis.get("repo_count")
-    stars = analysis.get("total_stars")
-    language = analysis.get("top_language")
+
     level = analysis.get("developer_level")
+    language = analysis.get("top_language")
+    stars = analysis.get("total_stars")
 
-    summary = f"{name} is classified as an {level.lower()} with {repos} public repositories."
+    summary = f"""
+{name} is classified as an {level.lower()} developer with {repos} public repositories on GitHub.
 
-    if language:
-        summary += f" The developer primarily works with {language}."
+The developer primarily works with {language}, suggesting a strong focus on projects built within this technology ecosystem.
 
-    if stars > 1000:
-        summary += " Their projects have received significant community attention through high star counts."
+Across all repositories, the projects have accumulated approximately {stars} stars from the open-source community.
 
-    if followers > 100:
-        summary += " The profile also has a strong follower base, indicating recognition in the developer community."
+With {followers} followers on GitHub, the developer maintains visible engagement within the developer ecosystem.
+"""
 
-    summary += " Overall, the developer shows active engagement in open-source development."
+    strengths = [
+        f"Strong experience with {language}",
+        "Active open-source contributor",
+        "Consistent repository activity"
+    ]
 
-    return summary
+    roles = [
+        "Software Engineer",
+        "Full-Stack Developer",
+        "Open-Source Contributor"
+    ]
+
+    return {
+        "summary": summary.strip(),
+        "strengths": strengths,
+        "roles": roles
+    }

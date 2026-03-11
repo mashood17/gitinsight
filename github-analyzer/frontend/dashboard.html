@@ -1,70 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+<meta charset="UTF-8">
 <title>GitInsight Dashboard</title>
 
-<div id="loading" class="loading">
-<div class="spinner"></div>
-<p>Analyzing GitHub profile...</p>
-</div>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css?v=1">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
 
-<header class="header">
 
-<h1 class="logo">GitInsight</h1>
+<!-- NAVBAR (same as landing page) -->
 
-<div class="search-box">
-<input id="searchInput" placeholder="Search GitHub username">
+<header class="navbar">
+
+<div class="logo animate-logo">GitInsight</div>
+
+<nav>
+<a href="index.html#features">Features</a>
+<a href="index.html#searchSection">Analyze</a>
+</nav>
+
+</header>
+
+
+<!-- LOADING -->
+
+<div id="loading" class="loading-screen">
+<div class="spinner"></div>
+<p>Analyzing GitHub profile...</p>
+</div>
+
+
+
+<!-- DASHBOARD -->
+
+<section class="dashboard">
+
+<div class="dashboard-container">
+
+<h1 class="dashboard-title">Developer Analytics</h1>
+
+
+
+<!-- SEARCH BAR -->
+
+<div class="dashboard-search">
+
+<input id="searchInput" placeholder="Enter GitHub username">
+
 <button onclick="searchUser()">Analyze</button>
+
 </div>
 
-</header>    
-<div class="container">
 
-<h1 class="title">GitInsight Dashboard</h1>
 
-<div class="card">
-<h2>Recent Searches</h2>
-<div id="recent-searches"></div>
-</div>
+<!-- PROFILE CARD -->
 
 <div class="card">
 <h2>Profile</h2>
 <div id="profile"></div>
 </div>
 
-<div class="stats-grid" id="stats"></div>
+
+
+<!-- STATS -->
+
+<div id="stats" class="stats-grid"></div>
+
+
+
+<!-- SCORE -->
 
 <div class="card">
 <h2>Developer Score</h2>
+
 <div class="score-container">
 <div id="score-bar"></div>
 </div>
+
 <p id="score-text"></p>
+
 </div>
+
+
+
+<!-- LANGUAGE CHART -->
 
 <div class="card">
 <h2>Language Distribution</h2>
+<div class="chart-container">
 <canvas id="languageChart"></canvas>
-</div>
+</div></div>
+
+
+
+<!-- TOP REPOS -->
 
 <div class="card">
 <h2>Top Repositories</h2>
 <div id="repos"></div>
 </div>
 
+
+
+<!-- AI SUMMARY -->
+
 <div class="card">
 <h2>AI Summary</h2>
 <div id="summary"></div>
 </div>
 
+
+
 </div>
-</div>
+
+</section>
+
+
 
 <script src="script.js"></script>
 

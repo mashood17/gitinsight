@@ -36,7 +36,9 @@ def analyze_user(username):
 
         "analysis": analysis,
 
-        "ai_summary": summary,
+        "ai_summary": summary["summary"],
+        "strengths": summary["strengths"],
+        "roles": summary["roles"],
 
         "top_repositories": [
             {

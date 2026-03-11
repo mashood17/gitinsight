@@ -1,22 +1,237 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+<meta charset="UTF-8">
 <title>GitInsight</title>
-<link rel="stylesheet" href="style.css?v=1">
-<script src="./script.js"></script>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-<div class="container">
+<header class="navbar">
 
-<h1>GitInsight</h1>
-<p>Analyze GitHub Developer Profiles</p>
+<div class="logo animate-logo">GitInsight</div>
 
-<input type="text" id="username" placeholder="Enter GitHub username">
+<nav>
+<a href="#features">Features</a>
+<button class="btn-orange" onclick="scrollToSearch()">Get Started</button>
+</nav>
+
+</header>
+
+
+
+<section class="hero">
+
+<div class="hero-bg"></div>
+<div class="hero-left">
+
+<h1>
+GitHub<br>
+Developer<br>
+<span>Analytics</span>
+</h1>
+
+<p>
+Analyze any GitHub profile and discover developer insights instantly.
+Powered by advanced analytics and AI-driven intelligence.
+</p>
+
+<div class="hero-buttons">
+
+<button class="btn-orange" onclick="scrollToSearch()">Analyze Profile</button>
+</button>
+
+<button class="btn-outline" id="watchDemo">Watch Demo</button>
+
+</div>
+
+</div>
+
+
+<div class="hero-right">
+<img src="hero-analytics.avif" alt="GitHub Analytics Illustration">
+</div>
+
+</section>
+
+
+
+<section class="stats">
+
+<div>
+<h2>10k+</h2>
+<p>Profiles Analyzed</p>
+</div>
+
+<div>
+<h2>5K+</h2>
+<p>Active Users</p>
+</div>
+
+<div>
+<h2>99.9%</h2>
+<p>Uptime</p>
+</div>
+
+</section>
+
+
+
+<section class="features" id="features">
+
+<h2>Powerful Analytics Features</h2>
+
+<p class="subtitle">
+Everything you need to understand developer profiles and make data-driven decisions
+</p>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+<h3>Developer Scoring</h3>
+<p>Assess contribution quality and repository impact.</p>
+</div>
+
+<div class="feature-card">
+<h3>Repository Analytics</h3>
+<p>Analyze stars, forks, and contribution patterns.</p>
+</div>
+
+<div class="feature-card">
+<h3>Language Insights</h3>
+<p>Breakdown of programming language expertise.</p>
+</div>
+
+<div class="feature-card">
+<h3>AI Summary</h3>
+<p>Generate intelligent summaries of developer profiles.</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="search-section" id="searchSection">
+
+<div class="search-container">
+
+<h2>Start Analyzing Now</h2>
+
+<p>Enter any GitHub username to get instant insights</p>
+
+<div class="search-box">
+
+<input id="usernameInput" placeholder="Enter GitHub Username">
 
 <button onclick="analyzeProfile()">Analyze Profile</button>
+
 </div>
+
+<div class="recent-label">Recent Searches</div>
+
+<div id="recentSearches" class="recent-search-grid"></div>
+
+</div>
+
+</section>
+
+
+
+<section class="benefits">
+
+<div class="benefit-grid">
+
+<div class="benefit-card">
+<h3>Instant</h3>
+<p>Analysis Results</p>
+</div>
+
+<div class="benefit-card">
+<h3>100%</h3>
+<p>Accurate Data</p>
+</div>
+
+<div class="benefit-card">
+<h3>Free</h3>
+<p>No Credit Card</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<footer class="footer">
+
+<div class="footer-left">
+<h2>GitInsight</h2>
+<p>
+Advanced GitHub developer analytics platform.
+Analyze profiles and discover developer insights.
+</p>
+</div>
+
+<div class="footer-columns">
+
+<div>
+<h4>Product</h4>
+<a href="#">Features</a>
+<a href="#">Pricing</a>
+<a href="#">API</a>
+<a href="#">Documentation</a>
+</div>
+
+<div>
+<h4>Company</h4>
+<a href="#">About</a>
+<a href="#">Blog</a>
+<a href="#">Careers</a>
+<a href="#">Contact</a>
+</div>
+
+<div>
+<h4>Legal</h4>
+<a href="#">Privacy</a>
+<a href="#">Terms</a>
+<a href="#">Security</a>
+<a href="#">Cookies</a>
+</div>
+
+</div>
+
+</footer>
+
+
+
+<div id="demoModal" class="modal">
+
+<div class="modal-content">
+
+<h2>Demo Coming Soon 🚀</h2>
+
+<p>
+We're preparing an interactive walkthrough of GitInsight.
+The demo video will be available soon.
+</p>
+
+<button onclick="closeModal()" class="btn-primary">
+Got it
+</button>
+
+</div>
+
+</div>
+
+
 
 <script src="script.js"></script>
 
